@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.nio.DoubleBuffer;
 import java.util.ArrayList;
 
 public class Exam3Adapter extends RecyclerView.Adapter<Exam3Adapter.ViewHolder> {
@@ -19,11 +18,6 @@ public class Exam3Adapter extends RecyclerView.Adapter<Exam3Adapter.ViewHolder> 
         public ViewHolder(View view) {
             super(view);
             textView = view.findViewById(R.id.textView);
-        }
-
-        public void setData() {
-            String title = arrayList.get(getAdapterPosition());
-            textView.setText(title);
         }
 
     }
@@ -44,7 +38,7 @@ public class Exam3Adapter extends RecyclerView.Adapter<Exam3Adapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int index) {
-        viewHolder.setData();
+        viewHolder.textView.setText(arrayList.get(index));
     }
 
     @Override
