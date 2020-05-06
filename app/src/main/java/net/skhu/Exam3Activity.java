@@ -39,7 +39,6 @@ public class Exam3Activity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.memu_exam3, menu);
-        MenuItem menuItem = menu.findItem(R.id.action_make);
         return true;
     }
 
@@ -57,7 +56,8 @@ public class Exam3Activity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         if (resultCode == RESULT_OK) {
-            arrayList.add();
+            String title = (String)intent.getSerializableExtra("title");
+            arrayList.add(title);
             exam3Adapter.notifyDataSetChanged();
         }
     }
