@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Exam3Adapter extends RecyclerView.Adapter<RecyclerView1Adapter.ViewHolder> {
+public class Exam3Adapter extends RecyclerView.Adapter<Exam3Adapter.ViewHolder> {
 
     static class ViewHolder extends RecyclerView.ViewHolder  {
         TextView textView;
@@ -30,13 +30,14 @@ public class Exam3Adapter extends RecyclerView.Adapter<RecyclerView1Adapter.View
     }
 
     @Override
-    public RecyclerView1Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        View view = layoutInflater.inflate(R.layout.item1, viewGroup, false);
+        return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView1Adapter.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(final ViewHolder viewHolder, final int index) {
+        viewHolder.textView.setText(arrayList.get(index));
     }
 
     @Override
