@@ -33,4 +33,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void btnExam3_clicked(View view) {
+        Intent intent = new Intent(this, Exam3Activity.class);
+        startActivity(intent);
+    }
+
 }
