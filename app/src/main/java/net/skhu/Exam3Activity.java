@@ -38,7 +38,7 @@ public class Exam3Activity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.memu_exam3, menu);
+        getMenuInflater().inflate(R.menu.menu_exam3, menu);
         return true;
     }
 
